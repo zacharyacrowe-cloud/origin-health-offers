@@ -43,7 +43,7 @@ details p{margin:0 0 16px;color:var(--muted)}
 .mid{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
 .mid .btn{max-width:440px;margin:0 auto}
 .mid p{color:var(--muted);margin:12px 0 0;font-size:15px}
-.book iframe{width:100%;height:900px;border:1px solid var(--line);border-radius:var(--r);background:#fff;display:block}
+.book iframe{width:100%;height:1100px;border:1px solid var(--line);border-radius:var(--r);background:#fff;display:block}
 .book .alt{text-align:center;font-size:15px;margin:12px 0 0}
 .loc a.map{font-weight:700}
 footer{font-size:13px;color:var(--muted);padding:26px 0 30px;border-top:1px solid var(--line)}
@@ -57,3 +57,4 @@ footer p{margin:0 0 8px}
 .doc{display:flex;gap:18px;align-items:flex-start}.doc img{width:110px;height:110px;border-radius:50%;object-fit:cover;flex:none;border:3px solid var(--sand)}
 .office{width:100%;max-width:360px;display:block;margin:0 auto 16px;border-radius:50%}
 @media(max-width:420px){.doc{flex-direction:column;align-items:center;text-align:center}}
+.reviews{color:#ffd166;font-weight:700;text-align:center;margin:12px 0 4px}
