@@ -65,3 +65,4 @@ footer p{margin:0 0 8px}
 .sticky .btn{flex:1;margin:0}
 .sticky .btn.call{flex:0 0 38%;background:var(--brand);}
 .sticky .btn.call:hover{background:var(--brand-d)}
+.contact-row .btn{white-space:nowrap;font-size:15px;padding:14px 4px}
