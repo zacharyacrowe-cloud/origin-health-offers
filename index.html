@@ -15,7 +15,7 @@ fbq('init','791773248585047');fbq('track','PageView');
 </head><body>
 <header class="top"><div class="wrap">
 <a class="logo" href="./"><img src="img/logo.png" alt="Origin Health &amp; Wellness logo" width="44" height="46"><span>Origin Health &amp; Wellness<small>Kingston Springs, TN</small></span></a>
-<a class="call" href="tel:+16153781195">&#9742; (615) 378-1195</a>
+<a class="call" data-ev="call" href="tel:+16153781195">&#9742; (615) 378-1195</a>
 </div></header>
 
 <main>
@@ -26,6 +26,7 @@ fbq('init','791773248585047');fbq('track','PageView');
 <div class="price"><b>$49</b><s>$275</s><span>new patient visit</span></div>
 <ul class="checks"><li>Health history &amp; full exam</li><li>X-rays</li><li>First treatment</li><li>X-ray review &amp; tailored care plan</li></ul>
 <a class="btn" href="#book">Book My $49 Visit</a>
+<div class="contact-row"><a class="btn alt-btn" data-ev="call" href="tel:+16153781195">&#9742; Call (615) 378-1195</a><a class="btn alt-btn" data-ev="text" href="sms:+16153781195?&amp;body=Hi%2C%20I%27m%20interested%20in%20the%20%2449%20new%20patient%20visit">&#128172; Text Us</a></div>
 <p class="reviews">&#9733;&#9733;&#9733;&#9733;&#9733; 4.9 from 340+ Google reviews</p>
 <p class="spots">Same-week appointments available.</p>
 </div></section>
@@ -33,7 +34,7 @@ fbq('init','791773248585047');fbq('track','PageView');
 <section class="book" id="book"><div class="wrap">
 <h2>Pick your time below &mdash; takes about 60 seconds.</h2>
 <iframe src="https://portal.sked.life/new-patient/time?key=c8ee289774bc4b73c769e722c77773aa9319d83832ac2dd619b5d44dfc84d4af&amp;from=" title="Book your appointment online"></iframe>
-<p class="alt">Prefer to talk? Call or text <a href="tel:+16153781195"><b>(615) 378-1195</b></a> &middot; <a href="sms:+16153781195">Text us</a></p>
+<p class="alt">Prefer to talk? Call or text <a data-ev="call" href="tel:+16153781195"><b>(615) 378-1195</b></a> &middot; <a data-ev="text" href="sms:+16153781195?&amp;body=Hi%2C%20I%27m%20interested%20in%20the%20%2449%20new%20patient%20visit">Text us</a></p>
 <p class="alt">Scheduler not loading? <a href="https://portal.sked.life/new-patient/time?key=c8ee289774bc4b73c769e722c77773aa9319d83832ac2dd619b5d44dfc84d4af&amp;from=" rel="noopener">Open the booking page</a>.</p>
 </div></section>
 
@@ -78,7 +79,7 @@ fbq('init','791773248585047');fbq('track','PageView');
 <b>Origin Health &amp; Wellness</b><br>101 W. Kingston Springs Rd, Ste. C<br>Kingston Springs, TN 37082<br>
 <span class="muted">Right off I-40 at exit 188, in the same building as Reliant Bank. Free on-site parking.</span><br><br>
 <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Origin+Health+%26+Wellness%2C+101+W+Kingston+Springs+Rd+Ste+C%2C+Kingston+Springs%2C+TN+37082" target="_blank" rel="noopener">Get directions in Google Maps &rarr;</a><br>
-<a href="tel:+16153781195">Call (615) 378-1195</a>
+<a data-ev="call" href="tel:+16153781195">Call (615) 378-1195</a>
 </div>
 <p class="muted" style="font-size:15px">Convenient for Kingston Springs, Pegram, Ashland City, Fairview, Dickson, and west Nashville out to McCrory Lane.</p>
 <a class="btn" href="#book">Book My $49 Visit</a>
@@ -87,17 +88,23 @@ fbq('init','791773248585047');fbq('track','PageView');
 
 <footer><div class="wrap">
 <p>The $49 offer is for new patients only and covers the services listed above. Individual results vary. This page is for general information and is not medical advice.</p>
-<p>&copy; 2026 Origin Health &amp; Wellness &middot; 101 W. Kingston Springs Rd, Ste. C, Kingston Springs, TN 37082 &middot; <a href="tel:+16153781195">(615) 378-1195</a></p>
+<p>&copy; 2026 Origin Health &amp; Wellness &middot; 101 W. Kingston Springs Rd, Ste. C, Kingston Springs, TN 37082 &middot; <a data-ev="call" href="tel:+16153781195">(615) 378-1195</a></p>
 <p>Also looking into knee care? <a href="knee/">See the $49 Knee Assessment</a>.</p>
 <p><a href="privacy/">Privacy Policy</a></p>
 </div></footer>
 
-<div class="sticky"><a class="btn" href="#book">Book My $49 Visit</a></div>
+<div class="sticky"><a class="btn" href="#book">Book $49 Visit</a><a class="btn call" data-ev="call" href="tel:+16153781195">&#9742; Call</a></div>
 <script>
-(function(){var page=location.pathname.indexOf('/knee')>-1?'knee':'chiro_np';
-document.querySelectorAll('a[href="#book"]').forEach(function(a){a.addEventListener('click',function(){if(window.fbq)fbq('trackCustom','BookClick',{page:page});});});
-var bk=document.getElementById('book'),st=document.querySelector('.sticky'),seen=false;
-if('IntersectionObserver' in window&&bk){new IntersectionObserver(function(es){es.forEach(function(e){if(st)st.style.display=e.isIntersecting?'none':'';if(e.isIntersecting&&!seen){seen=true;if(window.fbq)fbq('track','ViewContent',{content_name:page+'_scheduler'});}});},{threshold:0.05}).observe(bk);}
+(function(){var offer="chiro_np";
+function ev(type,name,params){try{if(window.fbq)fbq(type,name,params);}catch(e){}}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;
+var h=a.getAttribute('href')||'',t=a.getAttribute('data-ev');
+if(h==='#book'){ev('trackCustom','BookClick',{offer:offer});}
+else if(t==='call'||h.indexOf('tel:')===0){ev('trackCustom','CallClick',{offer:offer});ev('track','Contact',{content_name:offer+'_call'});}
+else if(t==='text'||h.indexOf('sms:')===0){ev('trackCustom','TextClick',{offer:offer});ev('track','Contact',{content_name:offer+'_text'});}
+},true);
+var bk=document.getElementById('book'),sb=document.querySelector('.sticky a[href="#book"]'),seen=false;
+if('IntersectionObserver' in window&&bk){new IntersectionObserver(function(es){es.forEach(function(x){if(sb)sb.style.display=x.isIntersecting?'none':'';if(x.isIntersecting&&!seen){seen=true;ev('track','ViewContent',{content_name:offer+'_scheduler'});}});},{threshold:0.05}).observe(bk);}
 })();
 </script>
 </body></html>
