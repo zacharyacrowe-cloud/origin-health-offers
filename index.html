@@ -99,7 +99,7 @@ fbq.disablePushState=true;fbq('init','791773248585047');fbq('track','PageView');
 function ev(type,name,params){try{if(window.fbq)fbq(type,name,params);}catch(e){}}
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;
 var h=a.getAttribute('href')||'',t=a.getAttribute('data-ev');
-if(h==='#book'){ev('trackCustom','BookClick',{offer:offer});}
+if(h==='#book'){ev('trackCustom','BookClick',{offer:offer});ev('track','Schedule',{content_category:offer});}
 else if(t==='call'||h.indexOf('tel:')===0){ev('trackCustom','CallClick',{offer:offer});ev('track','Contact',{content_name:offer+'_call'});}
 else if(t==='text'||h.indexOf('sms:')===0){ev('trackCustom','TextClick',{offer:offer});ev('track','Contact',{content_name:offer+'_text'});}
 },true);
