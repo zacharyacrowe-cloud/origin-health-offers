@@ -74,3 +74,6 @@ h1 em{font-style:normal;color:#ffd166}
 .stack .checks{margin:0 0 10px}.stack .checks li{margin:5px 0}
 .stack-p{margin:0 0 10px;font-size:16px}.stack-p b{font-size:22px}
 .book h2{margin-bottom:12px}
+.hours{margin:0 0 14px;font-size:15px}.hours b{display:block;margin-bottom:4px}
+.hours div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding:3px 0}
+.hours div span:first-child{font-weight:600;white-space:nowrap}.hours div span:last-child{text-align:right}
