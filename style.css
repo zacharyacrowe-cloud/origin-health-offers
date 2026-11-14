@@ -66,3 +66,11 @@ footer p{margin:0 0 8px}
 .sticky .btn.call{flex:0 0 38%;background:var(--brand);}
 .sticky .btn.call:hover{background:var(--brand-d)}
 .contact-row .btn{white-space:nowrap;font-size:15px;padding:14px 4px}
+/* value-offer drafts */
+h1 em{font-style:normal;color:#ffd166}
+.hero .btn{margin-top:4px}
+.stack{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);border-radius:var(--r);padding:16px 16px 6px;margin:16px 0 4px}
+.stack-h{font-weight:800;margin:0 0 6px;font-size:16px;text-transform:uppercase;letter-spacing:.4px;opacity:.9}
+.stack .checks{margin:0 0 10px}.stack .checks li{margin:5px 0}
+.stack-p{margin:0 0 10px;font-size:16px}.stack-p b{font-size:22px}
+.book h2{margin-bottom:12px}
