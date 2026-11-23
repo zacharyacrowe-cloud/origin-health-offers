@@ -12,7 +12,7 @@
 fbq.disablePushState=true;fbq('init','791773248585047');fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=791773248585047&ev=PageView&noscript=1"></noscript>
-</head><body>
+</head><body data-offer="chiro_np">
 <header class="top"><div class="wrap">
 <a class="logo" href="./"><img src="img/logo.png" alt="Origin Health &amp; Wellness logo" width="44" height="46"><span>Origin Health &amp; Wellness<small>Kingston Springs, TN</small></span></a>
 <a class="call" data-ev="call" href="tel:+16153781195">&#9742; (615) 378-1195</a>
@@ -85,18 +85,5 @@ fbq.disablePushState=true;fbq('init','791773248585047');fbq('track','PageView');
 
 <div class="sticky"><a class="btn" href="#book">Book &middot; <span data-offer="price">$79</span></a><a class="btn call" data-ev="call" href="tel:+16153781195">&#9742; Call</a></div>
 <script src="offer.js"></script>
-<script>
-(function(){var offer="chiro_np";
-function ev(type,name,params){try{if(window.fbq)fbq(type,name,params);}catch(e){}}
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;
-var h=a.getAttribute('href')||'',t=a.getAttribute('data-ev');
-if(h==='#book'){ev('trackCustom','BookClick',{offer:offer});ev('track','Schedule',{content_category:offer});}
-else if(t==='bookext'){ev('trackCustom','BookExternal',{offer:offer});ev('track','Schedule',{content_category:offer+'_external'});}
-else if(t==='call'||h.indexOf('tel:')===0){ev('trackCustom','CallClick',{offer:offer});ev('track','Contact',{content_name:offer+'_call'});}
-else if(t==='text'||h.indexOf('sms:')===0){ev('trackCustom','TextClick',{offer:offer});ev('track','Contact',{content_name:offer+'_text'});}
-},true);
-var bk=document.getElementById('book'),sb=document.querySelector('.sticky a[href="#book"]'),seen=false;
-if('IntersectionObserver' in window&&bk){new IntersectionObserver(function(es){es.forEach(function(x){if(sb)sb.style.display=x.isIntersecting?'none':'';if(x.isIntersecting&&!seen){seen=true;ev('track','ViewContent',{content_name:offer+'_scheduler'});}});},{threshold:0.05}).observe(bk);}
-})();
-</script>
+<script src="pixel-events.js"></script>
 </body></html>
